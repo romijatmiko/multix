@@ -13,7 +13,7 @@ export default function Home() {
 				<div class="w-full h-64 lg:w-1/2 lg:h-auto">
 					<img
 						class="h-full w-full object-cover"
-						src="https://images.unsplash.com/photo-1618609377864-68609b857e90?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=928&q=80"
+						src="https://images.unsplash.com/photo-1488372759477-a7f4aa078cb6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80"
 						alt="Winding mountain road"
 					/>
 				</div>
@@ -21,11 +21,14 @@ export default function Home() {
 				<div class="max-w-lg bg-white md:max-w-2xl md:z-10 md:shadow-lg md:absolute md:top-0 md:mt-48 lg:w-3/5 lg:left-0 lg:mt-20 lg:ml-20 xl:mt-24 xl:ml-12">
 					<div class="flex flex-col p-12 md:px-16">
 						<h2 class="text-2xl font-medium uppercase text-black-800 lg:text-4xl">
-							Audio Compression
+							Background Remover
 						</h2>
 						<p class="mt-4">
-							By reducing the file size, web developers can accommodate more
-							audio files within the server's storage capacity.
+							A background remover is a software tool or algorithm that
+							automatically removes the background from an image, leaving the
+							main subject or object isolated. It uses advanced image processing
+							techniques to detect and differentiate the foreground subject from
+							the background.
 						</p>
 
 						<div class="mt-8"></div>

@@ -22,7 +22,7 @@ const Card = () => {
 						</div>
 						<a
 							class="group inline-flex items-center h-9 rounded-full text-sm font-semibold whitespace-nowrap px-3 focus:outline-none focus:ring-2 bg-slate-100 text-slate-700 hover:bg-slate-200 hover:text-slate-900 focus:ring-slate-500 dark:bg-slate-700 dark:text-slate-100 dark:hover:bg-slate-600 dark:hover:text-white dark:focus:ring-slate-500 mt-6"
-							href="https://headlessui.dev">
+							href="/audio-conversion">
 							Use Now
 							<span class="sr-only">
 								, Completely unstyled, fully accessible UI components
@@ -65,7 +65,7 @@ const Card = () => {
 						</div>
 						<a
 							class="group inline-flex items-center h-9 rounded-full text-sm font-semibold whitespace-nowrap px-3 focus:outline-none focus:ring-2 bg-slate-100 text-slate-700 hover:bg-slate-200 hover:text-slate-900 focus:ring-slate-500 dark:bg-slate-700 dark:text-slate-100 dark:hover:bg-slate-600 dark:hover:text-white dark:focus:ring-slate-500 mt-6"
-							href="https://heroicons.com">
+							href="background-remover">
 							Use Now
 							<span class="sr-only">
 								, Beautiful hand-crafted SVG icons, by the makers of Tailwind
@@ -109,7 +109,7 @@ const Card = () => {
 						</div>
 						<a
 							class="group inline-flex items-center h-9 rounded-full text-sm font-semibold whitespace-nowrap px-3 focus:outline-none focus:ring-2 bg-slate-100 text-slate-700 hover:bg-slate-200 hover:text-slate-900 focus:ring-slate-500 dark:bg-slate-700 dark:text-slate-100 dark:hover:bg-slate-600 dark:hover:text-white dark:focus:ring-slate-500 mt-6"
-							href="https://heropatterns.com">
+							href="/image-resizer">
 							Use Now
 							<span class="sr-only">
 								, Seamless SVG background patterns by the makers of Tailwind

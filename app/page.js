@@ -8,7 +8,7 @@ export default function Home() {
 			<Navbar />
 			<main class="flex flex-1 w-full flex-col items-center justify-center text-center px-4 sm:mt-18 mt-16">
 				<a
-					href="https://github.com/romijatmiko/multix"
+					href="#"
 					target="_blank"
 					rel="noreferrer"
 					class="border rounded-2xl py-1 px-4 text-slate-500 text-sm mb-5 hover:scale-105 transition duration-300 ease-in-out">
@@ -38,11 +38,11 @@ export default function Home() {
 				</p>
 				<a
 					class="bg-black rounded-xl text-white font-medium px-4 py-3 sm:mt-10 mt-8 hover:bg-black/80"
-					href="#service">
-					Get Started Now →
+					href="https://github.com/romijatmiko/multix">
+					Give Star to Repository →
 				</a>
 			</main>
-			<section classname="About" class="bg-white-100">
+			<section class="bg-white-100">
 				<div class="container mx-auto py-16 px-4 mt-16 sm:px-6 lg:px-8">
 					<div class="grid grid-cols-1 md:grid-cols-2 items-center gap-6">
 						<div class="max-w-lg">
@@ -50,18 +50,17 @@ export default function Home() {
 								About Us
 							</h2>
 							<p class="mt-4 text-white-600 text-lg">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-								quis eros at lacus feugiat hendrerit sed ut tortor. Suspendisse
-								et magna quis elit efficitur consequat. Mauris eleifend velit a
-								pretium iaculis. Donec sagittis velit et magna euismod, vel
-								aliquet nulla malesuada. Nunc pharetra massa lectus, a fermentum
-								arcu volutpat vel.
+								Multix Multimedia Tools For Easy Life is an innovative company
+								specializing in the development and provision of cutting-edge
+								multimedia devices to enhance the quality of life for its users.
+								The company is dedicated to creating tools that make everyday
+								life easier through advanced multimedia technology.
 							</p>
 							<div class="mt-8">
 								<a
 									href="#"
 									class="text-blue-500 hover:text-blue-600 font-medium">
-									Learn more about us
+									Multix for ez
 									<span class="ml-2">&#8594;</span>
 								</a>
 							</div>
@@ -76,9 +75,7 @@ export default function Home() {
 					</div>
 				</div>
 			</section>
-			<div
-				className="service"
-				class="max-w-7xl mx-auto  px-4 sm:px-6 lg:py-24 lg:px-8">
+			<div class="max-w-7xl mx-auto  px-4 sm:px-6 lg:py-24 lg:px-8">
 				<h2 class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
 					Our Services
 				</h2>
