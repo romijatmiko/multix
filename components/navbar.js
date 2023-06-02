@@ -20,7 +20,7 @@ export default function Navbar() {
 			<div class="flex-grow"></div>
 			<div class="hidden items-center justify-center gap-6 md:flex">
 				<a
-					href="#"
+					href="https://github.com/romijatmiko/multix"
 					class="rounded-md bg-gradient-to-br from-orange-600 to-orange-400 px-3 py-1.5 font-dm text-sm font-medium text-white shadow-md shadow-black-400/50 transition-transform duration-200 ease-in-out hover:scale-[1.03]">
 					Github Repository
 				</a>

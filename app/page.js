@@ -8,7 +8,7 @@ export default function Home() {
 			<Navbar />
 			<main class="flex flex-1 w-full flex-col items-center justify-center text-center px-4 sm:mt-18 mt-16">
 				<a
-					href="#"
+					href="https://github.com/romijatmiko/multix"
 					target="_blank"
 					rel="noreferrer"
 					class="border rounded-2xl py-1 px-4 text-slate-500 text-sm mb-5 hover:scale-105 transition duration-300 ease-in-out">
@@ -38,7 +38,7 @@ export default function Home() {
 				</p>
 				<a
 					class="bg-black rounded-xl text-white font-medium px-4 py-3 sm:mt-10 mt-8 hover:bg-black/80"
-					href="#">
+					href="#service">
 					Get Started Now →
 				</a>
 			</main>
@@ -68,7 +68,7 @@ export default function Home() {
 						</div>
 						<div class="mt-12 md:mt-0">
 							<img
-								src="https://images.unsplash.com/photo-1531973576160-7125cd663d86"
+								src="https://images.unsplash.com/photo-1554232456-8727aae0cfa4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=435&q=80"
 								alt="About Us Image"
 								class="object-cover rounded-lg shadow-md"
 							/>
@@ -76,12 +76,15 @@ export default function Home() {
 					</div>
 				</div>
 			</section>
-			<div class="max-w-7xl mx-auto  px-4 sm:px-6 lg:py-24 lg:px-8">
+			<div
+				className="service"
+				class="max-w-7xl mx-auto  px-4 sm:px-6 lg:py-24 lg:px-8">
 				<h2 class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
 					Our Services
 				</h2>
+				<Card />
 			</div>
-			<Card />
+
 			<Footer />
 		</header>
 	);
