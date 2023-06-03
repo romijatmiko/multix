@@ -55,22 +55,20 @@ const Card = () => {
 							<span class="mb-1 block text-sm leading-6 text-purple-500">
 								Background Remover
 							</span>
-							Beautiful hand-crafted SVG icons, by the makers of Tailwind CSS.
 						</h3>
 						<div class="prose prose-slate prose-sm text-slate-600 dark:prose-dark">
 							<p>
-								A set of 450+ free MIT-licensed SVG icons. Available as basic
-								SVG icons and via first-party React and Vue libraries.
+								A background remover is a tool or software that allows users to
+								easily remove the background from an image. It utilizes advanced
+								algorithms and techniques to automatically detect and isolate
+								the foreground subject from the bg.
 							</p>
 						</div>
 						<a
 							class="group inline-flex items-center h-9 rounded-full text-sm font-semibold whitespace-nowrap px-3 focus:outline-none focus:ring-2 bg-slate-100 text-slate-700 hover:bg-slate-200 hover:text-slate-900 focus:ring-slate-500 dark:bg-slate-700 dark:text-slate-100 dark:hover:bg-slate-600 dark:hover:text-white dark:focus:ring-slate-500 mt-6"
 							href="background-remover">
 							Use Now
-							<span class="sr-only">
-								, Beautiful hand-crafted SVG icons, by the makers of Tailwind
-								CSS.
-							</span>
+							<span class="sr-only"></span>
 							<svg
 								class="overflow-visible ml-3 text-slate-300 group-hover:text-slate-400 dark:text-slate-500 dark:group-hover:text-slate-400"
 								width="3"
@@ -99,12 +97,13 @@ const Card = () => {
 							<span class="mb-1 block text-sm leading-6 text-cyan-500">
 								Image Resizer
 							</span>
-							Seamless SVG background patterns by the makers of Tailwind CSS.
 						</h3>
 						<div class="prose prose-slate prose-sm text-slate-600 dark:prose-dark">
 							<p>
-								A collection of over 100 free MIT-licensed high-quality SVG
-								patterns for you to use in your web projects.
+								An image resizer is a tool or software that allows you to change
+								the dimensions or size of an image. It enables users to scale an
+								image up or down, maintaining its aspect ratio or altering it as
+								desired.
 							</p>
 						</div>
 						<a
