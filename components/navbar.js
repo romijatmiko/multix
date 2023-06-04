@@ -16,7 +16,14 @@ export default function Navbar() {
 				<li class="pt-1.5 font-dm text-sm font-medium text-slate-700">
 					<a href="/image-resizer">Image Resizer</a>
 				</li>
+				<li class="pt-1.5 font-dm text-sm font-medium text-slate-700">
+					<a href="/video-conversion">Youtube Tools</a>
+				</li>
+				<li class="pt-1.5 font-dm text-sm font-medium text-slate-700">
+					<a href="/video-conversion">Social Media Tools</a>
+				</li>
 			</ul>
+
 			<div class="flex-grow"></div>
 			<div class="hidden items-center justify-center gap-6 md:flex">
 				<a
