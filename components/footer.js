@@ -44,25 +44,25 @@ export default function Footer() {
 						</a>
 					</div>
 					<div class="flex">
-						<p class="mr-1 text-gray-800">My Linkedin:</p>
+						<p class="mr-1 text-gray-800">My Email:</p>
 						<a
-							href="mailto:info@lorem.mail"
+							href="mailto:romijatmiko033@gmail.com"
 							aria-label="Our email"
 							title="Our email"
 							class="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800">
-							info@lorem.mail
+							romijatmiko033@gmail
 						</a>
 					</div>
 					<div class="flex">
-						<p class="mr-1 text-gray-800">Address:</p>
+						<p class="mr-1 text-gray-800">My Linkedin:</p>
 						<a
-							href="https://www.google.com/maps"
+							href="https://www.linkedin.com/in/romijatmiko"
 							target="_blank"
 							rel="noopener noreferrer"
-							aria-label="Our address"
-							title="Our address"
+							aria-label="Our Linkedin"
+							title="Our Linkedin"
 							class="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800">
-							312 Lovely Street, NY
+							@romijatmiko
 						</a>
 					</div>
 				</div>

@@ -17,7 +17,7 @@ export default function Navbar() {
 					<a href="/image-resizer">Image Resizer</a>
 				</li>
 				<li class="pt-1.5 font-dm text-sm font-medium text-slate-700">
-					<a href="/video-conversion">Youtube Tools</a>
+					<a href="/youtube-tools">Youtube Tools</a>
 				</li>
 				<li class="pt-1.5 font-dm text-sm font-medium text-slate-700">
 					<a href="/video-conversion">Social Media Tools</a>
