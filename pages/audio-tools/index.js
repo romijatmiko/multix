@@ -25,7 +25,7 @@ export default function Home() {
 							<div class="absolute -inset-1">
 								<div class="w-full h-full rotate-180 opacity-30 blur-lg filter bg-gradient-to-r from-yellow-400 via-pink-500 to-green-600"></div>
 							</div>
-							<a href="#">
+							<a href="/audio-tools/audio-compression">
 								<div class="relative overflow-hidden bg-white shadow-md rounded-xl h-full">
 									<div class="p-9">
 										<svg
