@@ -95,8 +95,8 @@ export default function Footer() {
 						</a>
 					</div>
 					<p class="mt-4 text-sm text-gray-500">
-						Bacon ipsum dolor amet short ribs pig sausage prosciutto chicken
-						spare ribs salami.
+						Hello iam romi jatmiko, i try learn to be fullstack developer. here
+						are my social media, thankss{" "}
 					</p>
 				</div>
 			</div>

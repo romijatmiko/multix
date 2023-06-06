@@ -140,7 +140,7 @@ const Card = () => {
 					<div class="order-1 sm:ml-6 xl:ml-0">
 						<h3 class="mb-1 text-slate-900 font-semibold dark:text-slate-200">
 							<span class="mb-1 block text-sm leading-6 text-black-500">
-								Image Resizer
+								Social Media Tools
 							</span>
 						</h3>
 						<div class="prose prose-slate prose-sm text-slate-600 dark:prose-dark">
@@ -174,7 +174,7 @@ const Card = () => {
 						</a>
 					</div>
 					<img
-						src="https://images.unsplash.com/photo-1523461811963-7f1023caeddd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=865&q=80"
+						src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80"
 						alt=""
 						class="mb-6 shadow-md rounded-lg bg-slate-50 w-full sm:w-[17rem] sm:mb-0 xl:mb-6 xl:w-full"
 						width="1216"
@@ -185,7 +185,7 @@ const Card = () => {
 					<div class="order-1 sm:ml-6 xl:ml-0">
 						<h3 class="mb-1 text-slate-900 font-semibold dark:text-slate-200">
 							<span class="mb-1 block text-sm leading-6 text-black-500">
-								Image Resizer
+								Youtube Tools
 							</span>
 						</h3>
 						<div class="prose prose-slate prose-sm text-slate-600 dark:prose-dark">
@@ -219,7 +219,7 @@ const Card = () => {
 						</a>
 					</div>
 					<img
-						src="https://images.unsplash.com/photo-1523461811963-7f1023caeddd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=865&q=80"
+						src="https://images.unsplash.com/photo-1611162616475-46b635cb6868?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80"
 						alt=""
 						class="mb-6 shadow-md rounded-lg bg-slate-50 w-full sm:w-[17rem] sm:mb-0 xl:mb-6 xl:w-full"
 						width="1216"

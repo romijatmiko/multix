@@ -8,13 +8,13 @@ export default function Navbar() {
 			</div>
 			<ul class="hidden items-center justify-center gap-6 md:flex">
 				<li class="pt-1.5 font-dm text-sm font-medium text-slate-700">
-					<a href="/audio-conversion">Audio Compression</a>
+					<a href="/audio-tools">Audio Tools</a>
 				</li>
 				<li class="pt-1.5 font-dm text-sm font-medium text-slate-700">
-					<a href="/background-remover">Background Remover</a>
+					<a href="/image-tools">Image Tools</a>
 				</li>
 				<li class="pt-1.5 font-dm text-sm font-medium text-slate-700">
-					<a href="/image-resizer">Image Resizer</a>
+					<a href="/video-tools">Video Tools</a>
 				</li>
 				<li class="pt-1.5 font-dm text-sm font-medium text-slate-700">
 					<a href="/youtube-tools">Youtube Tools</a>

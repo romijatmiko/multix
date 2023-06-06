@@ -8,7 +8,7 @@ export default function Home() {
 			<Navbar />
 			<main class="flex flex-1 w-full flex-col items-center justify-center text-center px-4 sm:mt-18 mt-16">
 				<a
-					href="#"
+					href="https://github.com/romijatmiko/multix"
 					target="_blank"
 					rel="noreferrer"
 					class="border rounded-2xl py-1 px-4 text-slate-500 text-sm mb-5 hover:scale-105 transition duration-300 ease-in-out">
@@ -75,6 +75,7 @@ export default function Home() {
 					</div>
 				</div>
 			</section>
+
 			<div class="max-w-7xl mx-auto  px-4 sm:px-6 lg:py-24 lg:px-8">
 				<h2 class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
 					Our Services
