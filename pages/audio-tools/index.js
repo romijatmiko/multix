@@ -13,7 +13,7 @@ export default function Home() {
 				<div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
 					<div class="max-w-xl mx-auto text-center xl:max-w-2xl">
 						<h2 class="text-3xl font-bold leading-tight text-black-50 sm:text-4xl xl:text-5xl mb-6">
-							Youtube Tools
+							Audio Tools
 						</h2>
 						<p class="mb-4">
 							We are creating a tool that helps you be more productive and
@@ -25,7 +25,7 @@ export default function Home() {
 							<div class="absolute -inset-1">
 								<div class="w-full h-full rotate-180 opacity-30 blur-lg filter bg-gradient-to-r from-yellow-400 via-pink-500 to-green-600"></div>
 							</div>
-							<a href="/audio-tools/audio-compression">
+							<a href="/audio-tools/audio-converter">
 								<div class="relative overflow-hidden bg-white shadow-md rounded-xl h-full">
 									<div class="p-9">
 										<svg
