@@ -1,46 +1,84 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import Compressor from "compressorjs";
 
-function AudioUpload() {
-	const [file, setFile] = useState(null);
-	const [outputPath, setOutputPath] = useState("");
-	const [errorMessage, setErrorMessage] = useState("");
+const AudioConverter = () => {
+	const [selectedFile, setSelectedFile] = useState(null);
+	const [convertedFile, setConvertedFile] = useState(null);
 
 	const handleFileChange = (event) => {
-		setFile(event.target.files[0]);
+		const file = event.target.files[0];
+		setSelectedFile(file);
 	};
 
-	const handleUpload = async () => {
-		try {
-			const formData = new FormData();
-			formData.append("audio", file);
+	const convertAudio = () => {
+		const reader = new FileReader();
+		reader.onload = async (event) => {
+			const arrayBuffer = event.target.result;
+			const compressedData = await compressAudio(arrayBuffer);
+			const compressedBlob = new Blob([compressedData], { type: "audio/wav" });
+			setConvertedFile(compressedBlob);
+		};
+		reader.readAsArrayBuffer(selectedFile);
+	};
 
-			const response = await fetch("/api/convert", {
-				method: "POST",
-				body: formData,
+	const compressAudio = (arrayBuffer) => {
+		return new Promise((resolve) => {
+			const audioContext = new (window.AudioContext ||
+				window.webkitAudioContext)();
+			audioContext.decodeAudioData(arrayBuffer, (audioBuffer) => {
+				const audioData = {
+					sampleRate: audioBuffer.sampleRate,
+					numberOfChannels: audioBuffer.numberOfChannels,
+					channelData: Array.from(audioBuffer.getChannelData(0)),
+				};
+				const compressorOptions = {
+					threshold: -24,
+					ratio: 12,
+					attack: 0.003,
+					release: 0.25,
+				};
+				const compressor = new Compressor(compressorOptions);
+				const compressedData = compressor.compress(audioData);
+				const wavData = convertToWav(compressedData);
+				resolve(wavData);
 			});
+		});
+	};
 
-			if (response.ok) {
-				const data = await response.json();
-				setOutputPath(data.outputPath);
-			} else {
-				setErrorMessage("Failed to convert audio");
-			}
-		} catch (error) {
-			console.error("Error uploading audio:", error);
-			setErrorMessage("Failed to convert audio");
+	const convertToWav = (audioData) => {
+		const wavData = new Uint8Array(audioData.channelData.length * 2);
+		let offset = 0;
+		for (let i = 0; i < audioData.channelData.length; i++) {
+			const sample = audioData.channelData[i];
+			const sample16 = Math.max(-1, Math.min(1, sample)) * 0x7fff;
+			wavData[offset++] = sample16 & 0xff;
+			wavData[offset++] = (sample16 >> 8) & 0xff;
 		}
+		return wavData;
+	};
+
+	const downloadFile = () => {
+		const url = URL.createObjectURL(convertedFile);
+		const link = document.createElement("a");
+		link.href = url;
+		link.download = "compressed_audio.wav";
+		link.click();
 	};
 
 	return (
 		<div>
-			<input type="file" accept="audio/*" onChange={handleFileChange} />
-			<button disabled={!file} onClick={handleUpload}>
+			<input type="file" onChange={handleFileChange} />
+			<button onClick={convertAudio} disabled={!selectedFile}>
 				Convert Audio
 			</button>
-			{outputPath && <p>Output file path: {outputPath}</p>}
-			{errorMessage && <p>{errorMessage}</p>}
+			{convertedFile && (
+				<div>
+					<audio controls src={URL.createObjectURL(convertedFile)}></audio>
+					<button onClick={downloadFile}>Download</button>
+				</div>
+			)}
 		</div>
 	);
-}
+};
 
-export default AudioUpload;
+export default AudioConverter;
