@@ -17,8 +17,8 @@ export default function Home() {
 
 		new Compressor(file, {
 			quality: 0.6,
-			maxWidth: 9000,
-			maxHeight: 9000,
+			maxWidth: 2000,
+			maxHeight: 2000,
 			success(result) {
 				setOriginalImage(URL.createObjectURL(file));
 				setCompressedImage(URL.createObjectURL(result));

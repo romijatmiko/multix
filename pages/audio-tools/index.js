@@ -63,7 +63,7 @@ export default function Home() {
 												stroke-linecap="round"></ellipse>
 										</svg>
 										<h3 class="mt-6 text-2xl font-bold text-gray-900 sm:mt-10">
-											Audio Compression
+											Mp3 to Wav
 										</h3>
 										<p class="mt-6 text-base text-gray-600">
 											Collaborate in realtime with other editors in a project.

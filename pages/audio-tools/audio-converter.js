@@ -10,6 +10,8 @@ const Mp3ToWavConverter = () => {
 	const [mp3File, setMp3File] = useState(null);
 	const [mp3FileName, setMp3FileName] = useState("");
 	const [wavFile, setWavFile] = useState(null);
+	const [compressedSize, setCompressedSize] = useState(0);
+	const [duration, setDuration] = useState({ minutes: 0, seconds: 0 });
 
 	const handleFileChange = (event) => {
 		const file = event.target.files[0];
@@ -46,6 +48,16 @@ const Mp3ToWavConverter = () => {
 						const wavFile = new Blob([audioData], { type: "audio/wav" });
 
 						setWavFile(wavFile);
+
+						// Calculate compressed size
+						const compressedSize = wavFile.size;
+						setCompressedSize(compressedSize);
+
+						// Calculate duration
+						const audioDuration = renderedBuffer.duration;
+						const minutes = Math.floor(audioDuration / 60);
+						const seconds = Math.floor(audioDuration % 60);
+						setDuration({ minutes, seconds });
 					})
 					.catch((error) => {
 						console.error("Failed to convert MP3 to WAV:", error);
@@ -64,11 +76,15 @@ const Mp3ToWavConverter = () => {
 				<div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
 					<div className="max-w-xl mx-auto text-center xl:max-w-2xl">
 						<h2 className="text-3xl font-bold leading-tight text-black-50 sm:text-4xl xl:text-5xl mb-6">
-							Image Resizer
+							Mp3 to Wav
 						</h2>
 						<p className="mb-4">
-							We are creating a tool that helps you be more productive and
-							efficient when building websites and webapps
+							MP3 to WAV is a conversion process that transforms MP3 files into
+							WAV format. MP3 is a popular audio compression format widely used
+							for storing music and sound in smaller file sizes. However, in
+							certain situations, such as when working with applications or
+							devices that only support WAV format, converting MP3 to WAV
+							becomes necessary.
 						</p>
 					</div>
 					<div className="py-20 bg-white px-2">
@@ -98,13 +114,13 @@ const Mp3ToWavConverter = () => {
 									</div>
 									{mp3File && (
 										<div>
-											<div class="mb-10 mt-10 rounded-md bg-[#F5F7FB] py-4 px-8">
-												<div class="flex items-center justify-between">
-													<span class="truncate pr-3 text-base font-medium text-[#07074D]">
+											<div className="mb-10 mt-10 rounded-md bg-[#F5F7FB] py-4 px-8">
+												<div className="flex items-center justify-between">
+													<span className="truncate pr-3 text-base font-medium text-[#07074D]">
 														{mp3FileName}
 													</span>
 												</div>
-												<div class="relative flex items-center justify-center md:hidden"></div>
+												<div className="relative flex items-center justify-center md:hidden"></div>
 											</div>
 											<button
 												className="flex items-center justify-center flex-none px-3 py-2 md:px-4 md:py-3 border-2 rounded-lg font-medium border-black bg-black text-white"
@@ -115,60 +131,36 @@ const Mp3ToWavConverter = () => {
 									)}
 
 									{wavFile && (
-										<div class=" mt-10 bg-white max-w-2xl shadow overflow-hidden sm:rounded-lg">
-											<div class="px-4 py-5 sm:px-6">
-												<h3 class="text-lg leading-6 font-medium text-gray-900">
-													User database
+										<div className="mt-10 bg-white max-w-2xl shadow overflow-hidden sm:rounded-lg">
+											<div className="px-4 py-5 sm:px-6">
+												<h3 className="text-lg leading-6 font-medium text-gray-900">
+													File Information
 												</h3>
-												<p class="mt-1 max-w-2xl text-sm text-gray-500">
-													Details and informations about user.
-												</p>
 											</div>
-											<div class="border-t border-gray-200">
+											<div className="border-t border-gray-200">
 												<dl>
-													<div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-														<dt class="text-sm font-medium text-gray-500">
-															Full name
+													<div className="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+														<dt className="text-sm font-medium text-gray-500">
+															File Name
 														</dt>
-														<dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-															Mickael Poulaz
-														</dd>
-													</div>
-													<div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-														<dt class="text-sm font-medium text-gray-500">
-															Best techno
-														</dt>
-														<dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-															React JS
-														</dd>
-													</div>
-													<div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-														<dt class="text-sm font-medium text-gray-500">
-															Email address
-														</dt>
-														<dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-															m.poul@example.com
-														</dd>
-													</div>
-													<div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-														<dt class="text-sm font-medium text-gray-500">
-															Salary
-														</dt>
-														<dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-															$10,000
-														</dd>
-													</div>
-													<div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-														<dt class="text-sm font-medium text-gray-500">
-															About
-														</dt>
-														<dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-															To get social media testimonials like these, keep
-															your customers engaged with your social media
-															accounts by posting regularly yourself
+														<dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+															{mp3FileName}
 														</dd>
 													</div>
 												</dl>
+											</div>
+											<div className="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+												<dt className="text-sm font-medium text-gray-500">
+													Download
+												</dt>
+												<dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+													<a
+														href={URL.createObjectURL(wavFile)}
+														download="converted_file.wav"
+														className="text-blue-500 hover:text-blue-700">
+														Download WAV
+													</a>
+												</dd>
 											</div>
 										</div>
 									)}
